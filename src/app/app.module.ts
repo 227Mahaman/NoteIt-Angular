@@ -8,24 +8,26 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { NotesComponent } from './notes/notes.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {Router, RouterModule, Routes} from "@angular/router";
+import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 const appRoutes: Routes = [
   {
     path: 'notes',
-    component: NotesComponent
+    component:NotesComponent
   },
   {
     path: 'feedback',
-    component: FeedbackComponent
+    component:FeedbackComponent
   },
   {
     path: '',
-    component: NotesComponent,
+    component:NotesComponent,
     pathMatch: 'full'
   },
   {
     path: '**',
-    component: NotFoundComponent
+    component:NotFoundComponent
   }
 ];
 
@@ -39,6 +41,8 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    FormsModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes, {enableTracing:true})
   ],
