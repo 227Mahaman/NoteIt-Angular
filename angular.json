@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "noteit-ng-app": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "noteit-ng-app"
+    }
+  },
+  "defaultProject": "noteit-ng-app",
+  "cli": {
+    "analytics": "9602c2dd-69de-4415-8b33-8048c5134d85"
+  }
 }
